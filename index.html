@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyKart | Unit 3 Web Technology</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span>Study</span>Kart <small>UNIT 3</small></div>
+  <div class="course">📚 <b>BCACC1102</b><small>Web Technology</small></div>
+  <div class="search">
+    <select id="category">
+      <option value="all">All</option><option value="layout">Layout</option>
+      <option value="responsive">Responsive</option><option value="styling">Styling</option>
+      <option value="effects">Effects</option><option value="qa">Q & A</option>
+    </select>
+    <input id="search" placeholder="Search topics, questions, answers...">
+    <button id="searchBtn">🔎</button>
+  </div>
+  <button class="dark" id="darkBtn">🌙</button>
+</header>
+
+<nav class="nav">
+  <button id="menuBtn">☰ Topics</button>
+  <a href="#home">Home</a><a href="#topics">Topics</a><a href="#qa">Q & A</a>
+  <a href="#exam">Exam Essentials</a><a href="#revision">Quick Revision</a>
+</nav>
+
+<section class="hero" id="home">
+  <div>
+    <span class="pill">BCACC1102 • UNIT 3</span>
+    <h1>Learn Web Technology<br><b>the easy way.</b></h1>
+    <p>Detailed explanations, examples, important questions and answers — all in one colorful study website.</p>
+    <button class="hero-btn" onclick="document.querySelector('#topics').scrollIntoView({behavior:'smooth'})">Start Learning →</button>
+  </div>
+  <div class="hero-art">💻<span>HTML</span><span>CSS</span><span>RWD</span></div>
+</section>
+
+<div class="layout">
+  <aside id="sidebar">
+    <div class="side-title"><b>📚 Topics</b><button id="closeSide">×</button></div>
+    <h4>CSS Layout</h4>
+    <a href="#positioning">Positioning</a><a href="#flexbox">Flexbox</a><a href="#float">Float</a><a href="#fluid">Fluid Layout</a>
+    <h4>Responsive</h4>
+    <a href="#responsive">Responsive Design</a><a href="#viewport">Viewport</a><a href="#media">Media Queries</a>
+    <h4>Styling</h4>
+    <a href="#lists">Lists</a><a href="#tables">Tables</a><a href="#links">Links</a><a href="#text">Text Effects</a>
+    <h4>Effects</h4>
+    <a href="#transitions">Transitions</a><a href="#transforms">Transforms</a>
+    <h4>Exam</h4>
+    <a href="#qa">Questions & Answers</a><a href="#exam">Important Questions</a>
+  </aside>
+
+  <main>
+    <section id="topics">
+      <div class="section-head"><div><span class="eyebrow">EXPLORE</span><h2>Unit 3 Topics</h2><p>Click any topic to study it in detail.</p></div></div>
+      <div class="cards">
+        <article class="topic-card c1" data-category="layout" data-text="css positioning static relative fixed absolute sticky">
+          <div class="icon">📐</div><span class="label">CSS Layout</span><h3>CSS Positioning</h3><p>Understand static, relative, fixed, absolute and sticky positioning.</p>
+          <button onclick="go('positioning')">Study Topic →</button>
+        </article>
+        <article class="topic-card c2" data-category="layout" data-text="flexbox flexible box layout flex container flex items">
+          <div class="icon">📦</div><span class="label">CSS Layout</span><h3>Flexbox</h3><p>Learn flex containers and direct-child flex items.</p>
+          <button onclick="go('flexbox')">Study Topic →</button>
+        </article>
+        <article class="topic-card c3" data-category="layout" data-text="float left right wrapping">
+          <div class="icon">↔️</div><span class="label">CSS Layout</span><h3>Float</h3><p>Position elements to the left or right and allow content wrapping.</p>
+          <button onclick="go('float')">Study Topic →</button>
+        </article>
+        <article class="topic-card c4" data-category="responsive" data-text="fluid layout percentage vw vh em rem">
+          <div class="icon">🌊</div><span class="label">Responsive</span><h3>Fluid Layout</h3><p>Use relative units such as %, vw, vh, em and rem.</p>
+          <button onclick="go('fluid')">Study Topic →</button>
+        </article>
+        <article class="topic-card c5" data-category="responsive" data-text="responsive web design device screen orientation resolution">
+          <div class="icon">📱</div><span class="label">Responsive</span><h3>Responsive Design</h3><p>Make layouts adapt to device, screen size, orientation and resolution.</p>
+          <button onclick="go('responsive')">Study Topic →</button>
+        </article>
+        <article class="topic-card c6" data-category="responsive" data-text="viewport meta tag width device width initial scale">
+          <div class="icon">🖥️</div><span class="label">Responsive</span><h3>Viewport</h3><p>Understand the viewport meta tag and its two key settings.</p>
+          <button onclick="go('viewport')">Study Topic →</button>
+        </article>
+        <article class="topic-card c7" data-category="responsive" data-text="media queries screen width height orientation">
+          <div class="icon">📏</div><span class="label">Responsive</span><h3>Media Queries</h3><p>Apply CSS rules according to screen conditions.</p>
+          <button onclick="go('media')">Study Topic →</button>
+        </article>
+        <article class="topic-card c8" data-category="styling" data-text="lists list style type position image">
+          <div class="icon">📝</div><span class="label">Styling</span><h3>Lists & Tables</h3><p>Style list markers and control table borders, spacing and alignment.</p>
+          <button onclick="go('lists')">Study Topic →</button>
+        </article>
+        <article class="topic-card c9" data-category="effects" data-text="links text effects transition transform hover active shadow">
+          <div class="icon">✨</div><span class="label">Effects</span><h3>CSS Effects</h3><p>Study links, text effects, transitions and transforms.</p>
+          <button onclick="go('effects')">Study Topic →</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="quick">
+      <div><span class="eyebrow">QUICK REVISION</span><h2>What you will learn</h2></div>
+      <div class="stats"><div><b>13</b><span>Core Topics</span></div><div><b>5</b><span>Position Types</span></div><div><b>4</b><span>Transforms</span></div><div><b>4</b><span>Link States</span></div></div>
+    </section>
+
+    <section class="lesson" id="positioning" data-text="css positioning static relative fixed absolute sticky">
+      <div class="lesson-title"><b>01</b><div><span>CSS LAYOUT</span><h2>CSS Positioning</h2></div></div>
+      <p>The <code>position</code> property controls how an element is positioned on a webpage.</p>
+      <div class="explain-grid">
+        <div><h3>Static</h3><p>Static is the default position. The element remains in the normal flow of the document.</p></div>
+        <div><h3>Relative</h3><p>The element is positioned relative to its normal position. Using top, right, bottom or left moves it while its original space remains.</p></div>
+        <div><h3>Fixed</h3><p>The element is positioned relative to the viewport and stays in the same place while the page is scrolled.</p></div>
+        <div><h3>Absolute</h3><p>The element is removed from normal flow and positioned relative to the nearest positioned ancestor; otherwise the body is used.</p></div>
+        <div><h3>Sticky</h3><p>The element behaves normally until a scroll position is reached, where it can remain attached to the viewport.</p></div>
+      </div>
+      <div class="code"><div>Example <button onclick="copyCode(this)">Copy</button></div><pre><code>.box {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}</code></pre></div>
+    </section>
+
+    <section class="lesson" id="flexbox" data-text="flexbox flexible box layout flex container flex items">
+      <div class="lesson-title"><b>02</b><div><span>CSS LAYOUT</span><h2>Flexbox</h2></div></div>
+      <p>Flexbox means <b>Flexible Box Layout</b>. It is used to arrange elements in a flexible layout.</p>
+      <div class="note green"><b>Important:</b> When a parent has <code>display: flex</code> or <code>display: inline-flex</code>, it becomes a flex container and its direct children become flex items.</div>
+      <div class="code"><div>Example <button onclick="copyCode(this)">Copy</button></div><pre><code>.container {
+  display: flex;
+}</code></pre></div>
+    </section>
+
+    <section class="lesson" id="float" data-text="float left right wrapping">
+      <div class="lesson-title"><b>03</b><div><span>CSS LAYOUT</span><h2>Float</h2></div></div>
+      <p>The <code>float</code> property positions an element to the left or right of its container and allows surrounding content to wrap around it.</p>
+      <div class="chips"><span>left</span><span>right</span><span>none</span><span>inline-start</span><span>inline-end</span></div>
+      <div class="code"><div>Syntax <button onclick="copyCode(this)">Copy</button></div><pre><code>float: left;
+float: right;
+float: none;
+float: inline-start;
+float: inline-end;</code></pre></div>
+    </section>
+
+    <section class="lesson" id="fluid" data-text="fluid layout percentage vw vh em rem">
+      <div class="lesson-title"><b>04</b><div><span>CSS LAYOUT</span><h2>Fluid Layout</h2></div></div>
+      <p>A fluid or liquid layout uses relative units so that a page can adapt to different screen sizes.</p>
+      <div class="unit-grid">
+        <div><b>%</b><span>Relative to parent</span></div><div><b>vw</b><span>Viewport width</span></div>
+        <div><b>vh</b><span>Viewport height</span></div><div><b>em</b><span>Relative to font size</span></div>
+        <div><b>rem</b><span>Relative to root font size</span></div>
+      </div>
+      <div class="compare"><div><b>Fixed example</b><code>width: 1200px;</code></div><div><b>Fluid example</b><code>width: 80%;</code></div></div>
+    </section>
+
+    <section class="lesson" id="responsive" data-text="responsive web design device screen orientation resolution readability usability">
+      <div class="lesson-title"><b>05</b><div><span>RESPONSIVE DESIGN</span><h2>Responsive Web Design</h2></div></div>
+      <p>Responsive Web Design adjusts layout, images and text according to the device, screen size, orientation and resolution.</p>
+      <div class="explain-grid four">
+        <div><h3>📖 Readability</h3><p>Content should remain easy to read.</p></div>
+        <div><h3>👆 Usability</h3><p>The interface should remain usable on different devices.</p></div>
+        <div><h3>↔️ No Horizontal Scrolling</h3><p>The layout should adapt to available width.</p></div>
+        <div><h3>🔄 Consistent UX</h3><p>The user experience should remain consistent.</p></div>
+      </div>
+    </section>
+
+    <section class="lesson" id="viewport" data-text="viewport meta tag width device width initial scale">
+      <div class="lesson-title"><b>06</b><div><span>RESPONSIVE DESIGN</span><h2>Viewport Meta Tag</h2></div></div>
+      <p>The viewport meta tag controls the page width and initial scale on devices.</p>
+      <div class="qa-mini"><b>What does <code>width=device-width</code> mean?</b><p>It makes the page width equal to the device's screen width.</p><b>What does <code>initial-scale=1.0</code> mean?</b><p>It sets the initial zoom level to 1.</p></div>
+      <div class="code"><div>HTML</div><pre><code>&lt;meta name="viewport"
+content="width=device-width, initial-scale=1.0"&gt;</code></pre></div>
+    </section>
+
+    <section class="lesson" id="media" data-text="media queries screen width height orientation">
+      <div class="lesson-title"><b>07</b><div><span>RESPONSIVE DESIGN</span><h2>Media Queries</h2></div></div>
+      <p>Media queries apply CSS rules based on conditions such as screen width, height and orientation.</p>
+      <div class="code"><div>Syntax</div><pre><code>@media (condition) {
+  /* CSS rules */
+}</code></pre></div>
+      <div class="note blue"><b>Advantages:</b> They support different screen sizes, improve user experience, can support SEO goals and help maintain responsive layouts.</div>
+    </section>
+
+    <section class="lesson" id="lists" data-text="lists list style type position image">
+      <div class="lesson-title"><b>08</b><div><span>CSS STYLING</span><h2>Lists</h2></div></div>
+      <p>CSS list properties control the appearance and position of list markers.</p>
+      <div class="chips"><span>list-style-type</span><span>list-style-position</span><span>list-style-image</span></div>
+    </section>
+
+    <section class="lesson" id="tables" data-text="tables border collapse border spacing text align padding nth child">
+      <div class="lesson-title"><b>09</b><div><span>CSS STYLING</span><h2>Tables</h2></div></div>
+      <p>CSS table properties control borders, spacing, alignment and cell appearance.</p>
+      <table><thead><tr><th>Property</th><th>Purpose</th></tr></thead><tbody>
+        <tr><td>border-collapse</td><td>Controls whether borders are collapsed.</td></tr>
+        <tr><td>border-spacing</td><td>Controls space between cells.</td></tr>
+        <tr><td>text-align</td><td>Controls horizontal text alignment.</td></tr>
+        <tr><td>padding</td><td>Controls space inside cells.</td></tr>
+        <tr><td>nth-child()</td><td>Selects specific rows or elements, such as even rows.</td></tr>
+      </tbody></table>
+      <div class="code"><div>Example</div><pre><code>tr:nth-child(even) {
+  /* style even rows */
+}</code></pre></div>
+    </section>
+
+    <section class="lesson" id="links" data-text="links link styling link visited hover active LVHA">
+      <div class="lesson-title"><b>10</b><div><span>CSS STYLING</span><h2>Link Styling</h2></div></div>
+      <p>CSS pseudo-classes can style links according to their state.</p>
+      <div class="linkstates"><span>a:link</span><span>a:visited</span><span>a:hover</span><span>a:active</span></div>
+      <div class="note yellow"><b>Exam trick:</b> Remember the order <b>LVHA</b> — Link, Visited, Hover, Active.</div>
+    </section>
+
+    <section class="lesson" id="text" data-text="text effects text transform text decoration letter spacing word spacing text shadow">
+      <div class="lesson-title"><b>11</b><div><span>CSS EFFECTS</span><h2>Text Effects</h2></div></div>
+      <p>CSS text properties change the appearance, spacing and decoration of text.</p>
+      <div class="chips"><span>text-transform</span><span>text-decoration</span><span>letter-spacing</span><span>word-spacing</span><span>text-shadow</span></div>
+      <div class="code"><div>Text Shadow</div><pre><code>text-shadow: 2px 2px 5px gray;</code></pre></div>
+    </section>
+
+    <section class="lesson" id="transitions" data-text="transitions property duration timing function delay">
+      <div class="lesson-title"><b>12</b><div><span>CSS EFFECTS</span><h2>Transitions</h2></div></div>
+      <p>A CSS transition creates a smooth change between different states of an element.</p>
+      <div class="transition-demo">Hover over me</div>
+      <div class="code"><div>Syntax</div><pre><code>transition: property duration timing-function delay;</code></pre></div>
+    </section>
+
+    <section class="lesson" id="transforms" data-text="transforms translate rotate scale skew">
+      <div class="lesson-title"><b>13</b><div><span>CSS EFFECTS</span><h2>Transforms</h2></div></div>
+      <p>Transforms change the position, size or shape of an element.</p>
+      <div class="transform-grid">
+        <div><b>translate()</b><span>Moves an element</span></div><div><b>rotate()</b><span>Rotates an element</span></div>
+        <div><b>scale()</b><span>Changes size</span></div><div><b>skew()</b><span>Slants an element</span></div>
+      </div>
+      <div class="code"><div>Examples</div><pre><code>transform: translate(50px, 100px);
+transform: rotate(45deg);
+transform: scale(1.5, 1.5);
+transform: skew(20deg, 10deg);</code></pre></div>
+    </section>
+
+    <section id="qa" class="qa-section">
+      <div class="section-head"><div><span class="eyebrow">STUDY MODE</span><h2>Questions & Answers</h2><p>Click an answer to expand it.</p></div></div>
+      <div id="qaList"></div>
+    </section>
+
+    <section id="exam" class="exam">
+      <span class="eyebrow">EXAM ESSENTIALS</span><h2>Important Questions</h2>
+      <div class="exam-grid">
+        <div><b>01</b><h3>Explain CSS positioning.</h3><p>Write the meaning of static, relative, fixed, absolute and sticky.</p></div>
+        <div><b>02</b><h3>What is Flexbox?</h3><p>Explain flex container and flex items with an example.</p></div>
+        <div><b>03</b><h3>Explain Responsive Web Design.</h3><p>Write its purpose and major goals.</p></div>
+        <div><b>04</b><h3>What is a viewport meta tag?</h3><p>Explain width=device-width and initial-scale=1.0.</p></div>
+        <div><b>05</b><h3>Explain Media Queries.</h3><p>Write syntax, conditions and advantages.</p></div>
+        <div><b>06</b><h3>Explain Transitions and Transforms.</h3><p>Differentiate smooth state changes from translate, rotate, scale and skew.</p></div>
+      </div>
+    </section>
+
+    <section id="revision" class="revision">
+      <h2>⚡ Last-Minute Revision</h2>
+      <div class="revision-grid">
+        <p><b>Position:</b> static, relative, fixed, absolute, sticky</p>
+        <p><b>Flexbox:</b> flex container + direct flex items</p>
+        <p><b>Fluid units:</b> %, vw, vh, em, rem</p>
+        <p><b>Responsive:</b> device, screen size, orientation, resolution</p>
+        <p><b>Viewport:</b> width=device-width + initial-scale=1.0</p>
+        <p><b>Links:</b> LVHA</p>
+        <p><b>Text:</b> transform, decoration, spacing, shadow</p>
+        <p><b>Transforms:</b> translate, rotate, scale, skew</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer><b>StudyKart</b><p>BCACC1102 • Unit 3 Web Technology</p><button onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Back to Top</button></footer>
+<script src="script.js"></script>
+</body>
+</html>
